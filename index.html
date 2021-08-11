@@ -1088,7 +1088,7 @@ Of
       <script type="application/json">
           {
                                                               "68662": {
-                "url": "https://api.whatsapp.com/send?phone=55 11 4583-3107"
+                "url": "https://api.whatsapp.com/send?phone=551145833142"
               },
 
                                                                                                   "68661": {
@@ -1116,6 +1116,8 @@ Of
             <input type="hidden" name="media" value="QUERY_PARAM(m)" data-amp-replace="QUERY_PARAM" />
             <input type="hidden" name="meio_captacao" value="LP_FORM_WHATSAPP" />
 
+                          <input type="hidden" name="amp_redirect_to" [value]="myUrls[newUrl].url" />
+            
             <button type="button" class="btn-close " on="tap:AMP.setState({ modalwhats: true })">X</button>
 
             <div class="form-group">
@@ -1169,14 +1171,10 @@ Of
                     </span>
                 </template>
             </div>
-            <button class="btn closeInSend" type="submit">
+            <button class="btn conversion" type="submit">
                 Enviar
             </button>
-
-                            <a [href]="myUrls[newUrl].url" on="tap:formWhats.clear" class="linkwhats conversion" target="_blank">
-                    Abrir WhatsApp
-                </a>
-                    </form>
+        </form>
       </div>
 </section>
     <section  hidden [hidden]="openModalCookie" class="backdrop" >
